@@ -29,5 +29,10 @@ spec:
               cpu: "250m"
               memory: "256Mi"
           volumeMounts:
-            - name: main-api-config
+            - name: main-api-config-volume
               mountPath: /.env
+              subPath: .env
+      volumes:
+        - name: main-api-config-volume
+          configMap:
+            name: main-api-config
