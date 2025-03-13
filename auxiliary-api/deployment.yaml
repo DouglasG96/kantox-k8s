@@ -22,9 +22,9 @@ spec:
             - containerPort: 6000
           envFrom:
             - configMapRef:
-              name: main-api-config
+                name: main-api-config
             - secretRef:
-              name: auxiliary-api-secrets
+                name: auxiliary-api-secrets
           resources:
             limits:
               cpu: "500m"
