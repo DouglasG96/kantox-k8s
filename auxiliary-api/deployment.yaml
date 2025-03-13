@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auxiliary
+  namespace: auxiliary-service-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auxiliary
+  template:
+    metadata:
+      labels:
+        app: auxiliary
+    spec:
+      containers:
+        - name: auxiliary
+          image: douglasg96/kantox-auxiliary-api:latest
+          ports:
+            - containerPort: 6000
+          envFrom:
+            - configMapRef:
+              name: main-api-config
+            - secretRef:
+              name: auxiliary-api-secrets
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"

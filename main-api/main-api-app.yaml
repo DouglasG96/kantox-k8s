@@ -11,7 +11,7 @@ spec:
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
-    namespace: main-api
+    namespace: main-api-prod
   syncPolicy:
     automated:
       prune: true

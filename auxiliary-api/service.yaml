@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: auxiliary
+  namespace: auxiliary-service-prod
+spec:
+  selector:
+    app: auxiliary
+  ports:
+    - protocol: TCP
+      port: 6000
+      targetPort: 6000
+  type: LoadBalancer
