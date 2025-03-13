@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: auxiliary-service
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/DouglasG96/kantox-k8s.git
+    path: auxiliary-api
+    targetRevision: main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: auxiliary-service
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
