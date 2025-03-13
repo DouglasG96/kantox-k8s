@@ -12,6 +12,8 @@ spec:
     metadata:
       labels:
         app: api
+      annotations:
+        configmap.revision: "{{ .Values.serviceVersion }}"
     spec:
       imagePullSecrets:
         - name: regcred
