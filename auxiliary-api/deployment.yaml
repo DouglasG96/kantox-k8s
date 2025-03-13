@@ -13,6 +13,8 @@ spec:
       labels:
         app: auxiliary
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: auxiliary
           image: douglasg96/kantox-auxiliary-api:latest

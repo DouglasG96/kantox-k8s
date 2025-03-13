@@ -13,6 +13,8 @@ spec:
       labels:
         app: api
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: api
           image: douglasg96/kantox-main-api:latest
