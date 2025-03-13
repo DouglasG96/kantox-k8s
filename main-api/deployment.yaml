@@ -28,4 +28,6 @@ spec:
             requests:
               cpu: "250m"
               memory: "256Mi"
-          
+          volumeMounts:
+            - name: main-api-config
+              mountPath: /.env

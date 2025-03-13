@@ -4,7 +4,8 @@ metadata:
   name: main-api-config
   namespace: main-api-prod
 data:
-  AWS_REGION: "us-east-1"
-  MAIN_API_VERSION: "1.0.0"
-  AUXILIARY_SERVICE_URL: "http://auxiliary-service-prod.auxiliary:6000"
-  PORT: "5000"
+  .env: |
+    AWS_REGION: "us-east-1"
+    MAIN_API_VERSION: "1.0.0"
+    AUXILIARY_SERVICE_URL: "http://auxiliary-service-prod.auxiliary:6000"
+    PORT: "5000"
