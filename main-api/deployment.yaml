@@ -20,7 +20,7 @@ spec:
             - containerPort: 5000
           envFrom:
             - configMapRef:
-              name: main-api-config
+                name: main-api-config
           resources:
             limits:
               cpu: "500m"
