@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: main-api-config
+  name: auxiliary-api-config
   namespace: auxiliary-service-prod
 data:
   AWS_REGION: "us-east-1"

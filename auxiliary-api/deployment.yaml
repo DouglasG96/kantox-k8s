@@ -22,7 +22,7 @@ spec:
             - containerPort: 6000
           envFrom:
             - configMapRef:
-                name: main-api-config
+                name: auxiliary-api-config
             - secretRef:
                 name: auxiliary-api-secrets
           resources:
